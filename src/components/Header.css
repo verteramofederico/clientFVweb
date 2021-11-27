@@ -1,0 +1,31 @@
+.navContainer {
+    margin-top: 50px !important;
+    margin-bottom: 15px !important;
+}
+
+.link {
+        color: #222;
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        word-wrap: break-word; 
+        transition-property: background-color, color;
+        transition-duration: 0.5s;
+}
+
+.link:focus, .link:hover, .link:active {
+    background: #ca2017 !important;
+    border-radius: 3px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-family: "Gentium Book Basic",serif;
+}
+
+.socialLink:hover {
+    fill: rgb(202, 32, 23) !important
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+  }

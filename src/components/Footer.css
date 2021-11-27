@@ -1,0 +1,37 @@
+.ulBlog a:link, .ulBlog a:visited, .ulBlog a:active {
+    border-radius: 3px;
+    color: #ca2017 !important;
+    text-decoration: none !important;
+    font-family: "Gentium Book Basic",serif;
+    margin-right: 15px;
+}
+
+.menuBlog { 
+    text-align: center;
+    margin-top: 65px !important;
+}
+
+.blogTitle {
+    margin-top: 40px
+}
+
+.ulBlog { 
+    margin-bottom: 50px !important;
+    display:inline-table; 
+    text-align: left;
+    list-style:none !important
+}
+.menuBlog li { 
+    border-top: 1px solid rgba(0,0,0,.075);
+    padding: 8px 0;
+}
+
+.socialIconsFooter {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30px !important;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+  }

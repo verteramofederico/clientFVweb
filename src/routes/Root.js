@@ -1,9 +1,7 @@
 import {
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-import App from "../components/App";
 import Header from "../components/Header";
 import Footer from "../components/Footer"
 import SelectLanguage from "../views/SelectLanguage"
@@ -14,9 +12,8 @@ function Root() {
     <>
       <Header/>
       <Routes>
+      <Route path="/home" element={<Home/>} />
       <Route path="/" element={<SelectLanguage />} />
-      <Route path="/app" element={<App />} />
-      <Route path="/home" element={<Home />} />
       </Routes>
       <Footer/>
     </>
