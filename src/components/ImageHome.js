@@ -4,7 +4,7 @@ import "./ImageHome.css"
 function ImageHome() {
     return (
       <>
-      <Image className="imageHome" src="/images/homeImg.jpeg" fluid />
+      <Image className="imageHome" src="/images/imgHome.jpeg" fluid />
       </>
     )
   }

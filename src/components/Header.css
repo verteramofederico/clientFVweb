@@ -20,6 +20,7 @@
     text-decoration: none;
     display: block;
     font-family: "Gentium Book Basic",serif;
+    padding: 2px !important
 }
 
 .socialLink:hover {
@@ -28,4 +29,10 @@
 
 hr.solid {
     border-top: 3px solid #bbb;
+  }
+
+  .languageIcon {
+      max-width: 40px;
+      max-height: 38px;
+      margin-right: 18px !important;
   }

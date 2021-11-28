@@ -1,0 +1,22 @@
+.contactWs {
+    margin-top: 55px;
+    border-radius: 3px;
+    font-size:1.5em;
+    text-align: center;
+    color: #ca2017;
+    text-decoration: none;
+    display: block;
+    font-family: "Gentium Book Basic",serif;
+    padding: 2px !important
+}
+
+.contactText {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.photoContact {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

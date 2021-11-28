@@ -1,41 +1,52 @@
 import {Nav, Navbar, NavDropdown, Container} from "react-bootstrap"
-import { Link, useLocation } from 'react-router-dom'
+import {useState} from 'react'
+import { useLocation, NavLink } from 'react-router-dom'
 import { SocialIcon } from 'react-social-icons'
 import ImageHome from './ImageHome'
 import './Header.css'
-
+import Image from 'react-bootstrap/Image'
+import SelectLanguage from '../components/SelectLanguage';
 
 function Header() {
   let location = useLocation();
+  const [chooseLanguage, setChooseLanguage] = useState(false);
+  const handleShow = () => {
+    setChooseLanguage(true)
+  }
+
+
   console.log()
     return (
       <>
+      {chooseLanguage ? <SelectLanguage showModal={true}/> : null}
       <Navbar className="navContainer" expand="lg">
   <Container>
-    <Link className="link" to="/">FEDERICO VERTERAMO</Link>
+    <NavLink activeClassName="active" className="link" to="/">FEDERICO VERTERAMO</NavLink>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link className="link" href="#home">ABOUT</Nav.Link>
+        <Nav.Link className="link"><NavLink className="link" to='/about'>ABOUT</NavLink></Nav.Link>
         <NavDropdown className="link" title="Multimedia" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">MUSIC</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">VIDEO</NavDropdown.Item>
+          <NavDropdown.Item ><NavLink className="link" to='/music'>MUSIC</NavLink></NavDropdown.Item>
+          <NavDropdown.Item ><NavLink className="link" to='/video'>VIDEO</NavLink></NavDropdown.Item>
           <NavDropdown.Divider />
-          <NavDropdown.Item href="#action/3.4">BLOG</NavDropdown.Item>
+          <NavDropdown.Item><NavLink className="link" to='/blog'>BLOG</NavLink></NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link className="link" href="#link">CONTACT</Nav.Link>
+        <Nav.Link className="link"><NavLink className="link" to='/contact'>CONTACT</NavLink></Nav.Link>
       </Nav>
+        
       <div className="socialIcons">
-        <SocialIcon className="socialLink" bgColor url="https://www.facebook.com/verteramofede/" style={{ height: 35, width: 35 }} />
-        <SocialIcon className="socialLink" bgColor url="https://www.instagram.com/federico.verteramo" style={{ height: 35, width: 35 }} />
-        <SocialIcon className="socialLink" bgColor url="https://www.youtube.com/channel/UCpUDd-xbZa1SfPk8U4fNheQ" style={{ height: 35, width: 35 }} />
-        <SocialIcon className="socialLink" bgColor url="https://open.spotify.com/artist/7arbLF5KNH9SXNCuSYUsYx" style={{ height: 35, width: 35 }} />
-        <SocialIcon className="socialLink" bgColor url="https://twitter.com/FedeVerteramo" style={{ height: 35, width: 35 }} />
+        <Image onClick={handleShow}  className="languageIcon" src="/images/internet.png" roundedCircle />
+        <SocialIcon className="socialLink" target='_blank'  bgColor url="https://www.facebook.com/verteramofede/" style={{ height: 35, width: 35 }} />
+        <SocialIcon className="socialLink" target='_blank' bgColor url="https://www.instagram.com/federico.verteramo" style={{ height: 35, width: 35 }} />
+        <SocialIcon className="socialLink" target='_blank' bgColor url="https://www.youtube.com/channel/UCpUDd-xbZa1SfPk8U4fNheQ" style={{ height: 35, width: 35 }} />
+        <SocialIcon className="socialLink" target='_blank' bgColor url="https://open.spotify.com/artist/7arbLF5KNH9SXNCuSYUsYx" style={{ height: 35, width: 35 }} />
+        <SocialIcon className="socialLink" target='_blank' bgColor url="https://twitter.com/FedeVerteramo" style={{ height: 35, width: 35 }} />
         </div>
     </Navbar.Collapse>
   </Container>
 </Navbar>
-    {location.pathname === "/home" ? <ImageHome/> : <hr className="solid"></hr> }   
+    {location.pathname === "/" ? <ImageHome/> : <hr className="solid"></hr> }
       </>
     )
   }

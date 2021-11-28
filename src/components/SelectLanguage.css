@@ -1,0 +1,9 @@
+@media (min-width: 785px) {
+    .buttonLanguage {
+        margin-left: 50px !important;
+    }
+}
+
+.modalUl {
+    list-style: none;
+}

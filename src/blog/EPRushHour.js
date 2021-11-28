@@ -1,10 +1,10 @@
 import {Image, Container} from 'react-bootstrap'
-import './Home.css'
+import '../views/Home.css'
 
-function Home() {
+function EPRushHour() {
     return (
       <Container>
-      <h1 className="titleBody">Rush Hour – New Release (EP)</h1>
+      <h1 className="titleBody">Rush Hour – New Release (EP).</h1>
       <Image className="imageMain" src="/images/content/tapaRushHour.jpeg" rounded />
       <div className="pContent">
       <p>As a result of a new partnership between <em>Federico Verteramo</em> and the <em>Sureños </em>label, <strong><em>Rush Hour</em></strong> is the brand new EP celebrating the music of <em>Otis Rush</em>.</p>
@@ -17,9 +17,12 @@ function Home() {
         <strong>Credits:</strong>
         <br/>Guitar-voice: Federico Verteramo<br/>Bass: Julio Fabiani<br/>Piano, hammond: Anahi Fabiani<br/>Drums: German Pedraza<br/>Trompet: Yair Lerner<br/>Sax: Santiago Zarba<br/>Produccion: Sureños<br/>Studio: Sureños<br/>Recording and mix: Julio Fabiani<br/>Photo and video: Jorge Costales (Wopa Live Streaming)<br/>Desing cover:&nbsp; Jorge Costales (Wopa Live Streaming)
       </div>
+
+
       </Container>
 
+      
     )
   }
   
-  export default Home;
+  export default EPRushHour;
